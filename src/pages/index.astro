@@ -8,8 +8,6 @@ import CallToAction from "@/partials/CallToAction.astro";
 import HeroSlider from "@/layouts/functional-components/HeroSlider";
 import { getCollectionProducts, getCollections } from "@/data/products";
 
-const { collections } = config.shopify;
-
 // Get slider products
 const sliderImages = getCollectionProducts("Main Dishes");
 const heroProducts = sliderImages.products;
