@@ -1,66 +1,261 @@
 
-export interface Product {
-  id: string;
-  title: string;
-  description: string;
-  image: string;
-  price: number;
-  collection: string;
-}
+import type { Product } from "@/lib/shopify/types";
 
-export const products: Product[] = [
+export const products = [
   {
     id: "1",
-    title: "Simplifier la distribution alimentaire avec notre expertise dédiée",
-    description:
-      "Transformez votre approvisionnement en une expérience fluide et fiable avec AFG",
-    image:
-      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
-    price: 15.99,
-    collection: "Main Dishes",
+    title: "Riz Basmati Premium",
+    description: "Riz basmati de première qualité, grain long et parfumé",
+    images: {
+      nodes: [{
+        url: "https://images.unsplash.com/photo-1550617931-e17a7b70dce2",
+        altText: "Riz Basmati"
+      }]
+    },
+    variants: {
+      nodes: [{
+        id: "1",
+        title: "1kg",
+        price: {
+          amount: "15.99",
+          currencyCode: "EUR"
+        }
+      }]
+    },
+    collections: { nodes: [{ title: "Céréales" }] },
+    tags: ["featured"]
   },
   {
-    id: "2", 
-    title: "Mantu",
-    description: "Steamed dumplings filled with meat and onions",
-    image:
-      "https://images.unsplash.com/photo-1541518763669-27fef04b14ea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
-    price: 12.99,
-    collection: "Appetizers",
+    id: "2",
+    title: "Huile d'Olive Extra Vierge",
+    description: "Huile d'olive pressée à froid de première qualité",
+    images: {
+      nodes: [{
+        url: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5",
+        altText: "Huile d'Olive"
+      }]
+    },
+    variants: {
+      nodes: [{
+        id: "2",
+        title: "750ml",
+        price: {
+          amount: "24.99",
+          currencyCode: "EUR"
+        }
+      }]
+    },
+    collections: { nodes: [{ title: "Huiles" }] },
+    tags: ["bio"]
   },
   {
     id: "3",
-    title: "Afghan Naan",
-    description: "Traditional Afghan bread",
-    image:
-      "https://images.unsplash.com/photo-1584534582042-939e91d1b3f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
-    price: 3.99,
-    collection: "Breads",
+    title: "Épices Mélange Oriental",
+    description: "Mélange traditionnel d'épices orientales",
+    images: {
+      nodes: [{
+        url: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d",
+        altText: "Épices"
+      }]
+    },
+    variants: {
+      nodes: [{
+        id: "3",
+        title: "200g",
+        price: {
+          amount: "12.99",
+          currencyCode: "EUR"
+        }
+      }]
+    },
+    collections: { nodes: [{ title: "Épices" }] },
+    tags: ["featured"]
   },
+  {
+    id: "4",
+    title: "Dattes Medjool",
+    description: "Dattes Medjool premium de qualité supérieure",
+    images: {
+      nodes: [{
+        url: "https://images.unsplash.com/photo-1604848698030-c434ba08ece1",
+        altText: "Dattes"
+      }]
+    },
+    variants: {
+      nodes: [{
+        id: "4",
+        title: "500g",
+        price: {
+          amount: "18.99",
+          currencyCode: "EUR"
+        }
+      }]
+    },
+    collections: { nodes: [{ title: "Fruits Secs" }] },
+    tags: ["bio"]
+  },
+  {
+    id: "5",
+    title: "Thé Vert à la Menthe",
+    description: "Thé vert traditionnel avec menthe fraîche",
+    images: {
+      nodes: [{
+        url: "https://images.unsplash.com/photo-1597481499750-3e6b22637e12",
+        altText: "Thé Vert"
+      }]
+    },
+    variants: {
+      nodes: [{
+        id: "5",
+        title: "100g",
+        price: {
+          amount: "9.99",
+          currencyCode: "EUR"
+        }
+      }]
+    },
+    collections: { nodes: [{ title: "Thés" }] },
+    tags: ["featured"]
+  },
+  {
+    id: "6",
+    title: "Couscous Fin",
+    description: "Couscous de semoule fine de qualité supérieure",
+    images: {
+      nodes: [{
+        url: "https://images.unsplash.com/photo-1590165482129-1b8b27698780",
+        altText: "Couscous"
+      }]
+    },
+    variants: {
+      nodes: [{
+        id: "6",
+        title: "1kg",
+        price: {
+          amount: "8.99",
+          currencyCode: "EUR"
+        }
+      }]
+    },
+    collections: { nodes: [{ title: "Céréales" }] },
+    tags: ["populaire"]
+  },
+  {
+    id: "7",
+    title: "Miel de Fleurs d'Oranger",
+    description: "Miel pur de fleurs d'oranger",
+    images: {
+      nodes: [{
+        url: "https://images.unsplash.com/photo-1587049633312-d628ae50a8ae",
+        altText: "Miel"
+      }]
+    },
+    variants: {
+      nodes: [{
+        id: "7",
+        title: "500g",
+        price: {
+          amount: "22.99",
+          currencyCode: "EUR"
+        }
+      }]
+    },
+    collections: { nodes: [{ title: "Miels" }] },
+    tags: ["bio"]
+  },
+  {
+    id: "8",
+    title: "Pistaches Grillées",
+    description: "Pistaches grillées et salées de première qualité",
+    images: {
+      nodes: [{
+        url: "https://images.unsplash.com/photo-1616684000067-36952fde56ec",
+        altText: "Pistaches"
+      }]
+    },
+    variants: {
+      nodes: [{
+        id: "8",
+        title: "250g",
+        price: {
+          amount: "14.99",
+          currencyCode: "EUR"
+        }
+      }]
+    },
+    collections: { nodes: [{ title: "Fruits Secs" }] },
+    tags: ["snacks"]
+  },
+  {
+    id: "9",
+    title: "Safran Premium",
+    description: "Safran pur de première qualité",
+    images: {
+      nodes: [{
+        url: "https://images.unsplash.com/photo-1596040033282-884edd2c910e",
+        altText: "Safran"
+      }]
+    },
+    variants: {
+      nodes: [{
+        id: "9",
+        title: "1g",
+        price: {
+          amount: "29.99",
+          currencyCode: "EUR"
+        }
+      }]
+    },
+    collections: { nodes: [{ title: "Épices" }] },
+    tags: ["premium"]
+  },
+  {
+    id: "10",
+    title: "Loukoums Assortis",
+    description: "Assortiment de loukoums traditionnels",
+    images: {
+      nodes: [{
+        url: "https://images.unsplash.com/photo-1516747773518-29521cd11203",
+        altText: "Loukoums"
+      }]
+    },
+    variants: {
+      nodes: [{
+        id: "10",
+        title: "400g",
+        price: {
+          amount: "16.99",
+          currencyCode: "EUR"
+        }
+      }]
+    },
+    collections: { nodes: [{ title: "Confiseries" }] },
+    tags: ["desserts"]
+  }
 ];
 
 export const collections = [
   {
-    title: "Main Dishes",
-    handle: "main-dishes",
-    image: "https://images.unsplash.com/photo-1547928576-b822bc410bdf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
+    title: "Céréales",
+    handle: "cereales",
+    image: "https://images.unsplash.com/photo-1550617931-e17a7b70dce2"
   },
   {
-    title: "Appetizers",
-    handle: "appetizers",
-    image: "https://images.unsplash.com/photo-1533622597524-a1215e26c0a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
+    title: "Épices",
+    handle: "epices",
+    image: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d"
   },
   {
-    title: "Breads",
-    handle: "breads",
-    image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
+    title: "Fruits Secs",
+    handle: "fruits-secs",
+    image: "https://images.unsplash.com/photo-1604848698030-c434ba08ece1"
   }
 ];
 
-export const getCollectionProducts = (collection: string) => {
-  return {
-    products: products.filter((product) => product.collection === collection),
-  };
-};
+export const getCollectionProducts = (collection: string) => ({
+  products: products.filter(product => 
+    product.collections.nodes.some(col => col.title === collection)
+  )
+});
 
 export const getCollections = () => collections;
