@@ -5,7 +5,7 @@ import CollectionsSlider from "@/functional-components/CollectionsSlider";
 import Base from "@/layouts/Base.astro";
 import { getCollectionProducts, getCollections } from "@/lib/shopify";
 import CallToAction from "@/partials/CallToAction.astro";
-import HeroSlider from "src/layouts/functional-components/HeroSlider";
+import HeroSlider from "@/layouts/functional-components/HeroSlider";
 
 const { collections } = config.shopify;
 
@@ -33,7 +33,7 @@ const { products: featuredProducts } = await getCollectionProducts({
     </div>
   </section>
 
-  {/* category section */}
+  <!-- category section -->
   <section class="section">
     <div class="container">
       <div class="text-center mb-6 md:mb-14">
@@ -43,7 +43,7 @@ const { products: featuredProducts } = await getCollectionProducts({
     </div>
   </section>
 
-  {/* Featured Products section */}
+  <!-- Featured Products section -->
   <section>
     <div class="container">
       <div class="text-center mb-6 md:mb-14">
