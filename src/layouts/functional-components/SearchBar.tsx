@@ -21,8 +21,8 @@ const SearchBar = () => {
 
   const updateURL = (query: string) => {
     const newURL = query ? `/products?q=${encodeURIComponent(query)}` : '/products';
-    // window.history.pushState({}, '', newURL);
-    window.location.href = newURL.toString();
+    window.history.pushState({}, '', newURL);
+    // window.location.href = newURL.toString();
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
