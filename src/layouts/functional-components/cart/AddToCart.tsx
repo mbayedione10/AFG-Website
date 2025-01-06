@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { useStore } from '@nanostores/react';
-import { cartIsOpen } from '@/cartStore';
+import { cartIsOpen, cart } from '@/cartStore';
 
 interface AddToCartProps {
   variants: any[];
@@ -11,7 +11,7 @@ interface AddToCartProps {
   stylesClass?: string;
 }
 
-export const AddToCart = ({
+const AddToCart = ({
   variants,
   availableForSale,
   handle,
@@ -20,7 +20,7 @@ export const AddToCart = ({
 }: AddToCartProps) => {
   const isOpen = useStore(cartIsOpen);
 
-  const addToCart = async () => {
+  const handleAddToCart = () => {
     if (!defaultVariantId) return;
     cartIsOpen.set(!isOpen);
   };
@@ -40,10 +40,12 @@ export const AddToCart = ({
   return (
     <button
       aria-label="Add to cart"
-      onClick={addToCart}
+      onClick={handleAddToCart}
       className={`btn btn-primary ${stylesClass}`}
     >
       Add to cart
     </button>
   );
 };
+
+export default AddToCart;
