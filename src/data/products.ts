@@ -1,3 +1,4 @@
+
 export interface Product {
   id: string;
   title: string;
@@ -14,15 +15,16 @@ export const products: Product[] = [
     description:
       "Transformez votre approvisionnement en une expérience fluide et fiable avec AFG",
     image:
-      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
     price: 15.99,
     collection: "Main Dishes",
   },
   {
-    id: "2",
+    id: "2", 
     title: "Mantu",
     description: "Steamed dumplings filled with meat and onions",
-    image: "https://images.unsplash.com/photo-1541518763669-27fef04b14ea?w=800",
+    image:
+      "https://images.unsplash.com/photo-1541518763669-27fef04b14ea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
     price: 12.99,
     collection: "Appetizers",
   },
@@ -30,7 +32,8 @@ export const products: Product[] = [
     id: "3",
     title: "Afghan Naan",
     description: "Traditional Afghan bread",
-    image: "https://images.unsplash.com/photo-1584534582042-939e91d1b3f7?w=800",
+    image:
+      "https://images.unsplash.com/photo-1584534582042-939e91d1b3f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80",
     price: 3.99,
     collection: "Breads",
   },
@@ -40,18 +43,18 @@ export const collections = [
   {
     title: "Main Dishes",
     handle: "main-dishes",
-    image: "https://images.unsplash.com/photo-1547928576-b822bc410bdf?w=800",
+    image: "https://images.unsplash.com/photo-1547928576-b822bc410bdf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
   },
   {
     title: "Appetizers",
     handle: "appetizers",
-    image: "https://images.unsplash.com/photo-1533622597524-a1215e26c0a2?w=800",
+    image: "https://images.unsplash.com/photo-1533622597524-a1215e26c0a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
   },
   {
     title: "Breads",
     handle: "breads",
-    image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800",
-  },
+    image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
+  }
 ];
 
 export const getCollectionProducts = (collection: string) => {
