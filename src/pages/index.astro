@@ -1,27 +1,23 @@
+
 ---
 import FeaturedProducts from "@/components/FeaturedProducts.astro";
 import config from "@/config/config.json";
 import CollectionsSlider from "@/functional-components/CollectionsSlider";
 import Base from "@/layouts/Base.astro";
-import { getCollectionProducts, getCollections } from "@/lib/shopify";
 import CallToAction from "@/partials/CallToAction.astro";
 import HeroSlider from "@/layouts/functional-components/HeroSlider";
+import { getCollectionProducts, getCollections } from "@/data/products";
 
 const { collections } = config.shopify;
 
-// Fetch slider images for the HeroSlider
-const sliderImages = await getCollectionProducts({
-  collection: collections.hero_slider,
-});
+// Get slider products
+const sliderImages = getCollectionProducts("Main Dishes");
 const heroProducts = sliderImages.products;
 
-const collectionProducts = await getCollections();
+const collectionProducts = getCollections();
 
-// Fetch featured products
-const { products: featuredProducts } = await getCollectionProducts({
-  collection: collections.featured_products,
-  reverse: false,
-});
+// Get featured products
+const featuredProducts = getCollectionProducts("Appetizers").products;
 ---
 
 <Base>
