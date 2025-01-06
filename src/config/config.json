@@ -6,6 +6,8 @@
     "favicon": "/images/favicon.png",
     "logo": "/images/afg-logo.png",
     "logo_darkmode": "/images/afg-logo.png",
+    "logo_width": "150",
+    "logo_height": "50",
     "description": "Découvrez les saveurs authentiques de l'Afghanistan"
   },
   "settings": {
