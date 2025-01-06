@@ -29,6 +29,22 @@ const featuredProducts = products.filter((product) => product.tags.includes("fea
     </div>
   </section>
 
-  <Testimonials />
+  <Testimonials 
+    title="Ce que disent nos clients"
+    testimonials={[
+      {
+        name: "Marie Dubois",
+        designation: "Cliente fidèle",
+        avatar: "/images/avatar-sm.png", 
+        content: "Des produits d'une qualité exceptionnelle et un service client irréprochable. Je recommande vivement!"
+      },
+      {
+        name: "Pierre Martin",
+        designation: "Chef cuisinier",
+        avatar: "/images/avatar-sm.png",
+        content: "Je m'approvisionne régulièrement ici pour mon restaurant. La fraîcheur et la qualité sont toujours au rendez-vous."
+      }
+    ]}
+  />
   <CallToAction />
 </Base>
