@@ -4,42 +4,40 @@ import { markdownify } from "@/lib/utils/textConverter";
 const { title = "", testimonials = [] } = Astro.props;
 ---
 
-<section class="section">
+<section class="section bg-theme-light dark:bg-darkmode-theme-light">
   <div class="container">
     <div class="row">
       <div class="mx-auto mb-12 text-center md:col-10 lg:col-8 xl:col-6">
         {title && <h2 set:html={markdownify(title)} class="mb-4" />}
       </div>
-      <div class="testimonials-wrapper">
-        {testimonials?.map((item) => (
-          <div class="mb-8">
-            <div class="rounded-lg bg-theme-light px-7 py-10 dark:bg-darkmode-theme-light">
-              <div class="text-dark dark:text-white">
-                {item.content && <blockquote set:html={markdownify(item.content)} />}
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {testimonials?.map((item) => (
+        <div class="bg-white dark:bg-darkmode-body rounded-xl shadow-md p-8 transition-transform hover:scale-105">
+          <div class="text-dark dark:text-white mb-6">
+            {item.content && <blockquote set:html={markdownify(item.content)} class="text-lg italic" />}
+          </div>
+          <div class="flex items-center">
+            {item.avatar && (
+              <div class="mr-4">
+                <img
+                  height={60}
+                  width={60}
+                  class="rounded-full border-4 border-primary/10"
+                  src={item.avatar}
+                  alt={item.name}
+                />
               </div>
-              <div class="mt-11 flex items-center">
-                {item.avatar && (
-                  <div class="text-dark dark:text-white mr-4">
-                    <img
-                      height={50}
-                      width={50}
-                      class="rounded-full"
-                      src={item.avatar}
-                      alt={item.name}
-                    />
-                  </div>
-                )}
-                <div>
-                  {item.name && <h3 set:html={markdownify(item.name)} class="h5 font-primary font-semibold" />}
-                  {item.designation && (
-                    <p set:html={markdownify(item.designation)} class="text-dark dark:text-white" />
-                  )}
-                </div>
-              </div>
+            )}
+            <div>
+              {item.name && <h3 set:html={markdownify(item.name)} class="text-xl font-semibold mb-1" />}
+              {item.designation && (
+                <p set:html={markdownify(item.designation)} class="text-gray-600 dark:text-gray-400" />
+              )}
             </div>
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   </div>
 </section>
