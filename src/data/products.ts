@@ -9,6 +9,7 @@ export interface Product {
     altText: string;
   }[];
   category: string;
+  tags: string[];
 }
 
 export const products: Product[] = [
@@ -23,7 +24,8 @@ export const products: Product[] = [
         altText: "Product 1 image"
       }
     ],
-    category: "Electronics"
+    category: "Electronics",
+    tags: ["featured"]
   },
   {
     id: "2", 
@@ -36,6 +38,7 @@ export const products: Product[] = [
         altText: "Product 2 image"
       }
     ],
-    category: "Accessories"
+    category: "Accessories",
+    tags: []
   }
 ];
