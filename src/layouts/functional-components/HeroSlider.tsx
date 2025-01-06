@@ -5,9 +5,8 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import type { Product } from "@/data/products";
-import { products } from "@/data/products";
 
-const HeroSlider = () => {
+const HeroSlider = ({ products }: { products: Product[] }) => {
   const featuredProducts = products.filter((product) => product.tags.includes("featured"));
 
   if (!featuredProducts || featuredProducts.length === 0) {
