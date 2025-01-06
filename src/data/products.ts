@@ -1,4 +1,3 @@
-
 export interface Product {
   id: string;
   title: string;
@@ -21,11 +20,11 @@ export const products: Product[] = [
     images: [
       {
         url: "https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=800&q=80",
-        altText: "Organic Fruits Basket"
-      }
+        altText: "Organic Fruits Basket",
+      },
     ],
     category: "Fresh Produce",
-    tags: ["featured", "organic"]
+    tags: ["featured", "organic"],
   },
   {
     id: "2",
@@ -35,11 +34,11 @@ export const products: Product[] = [
     images: [
       {
         url: "https://images.unsplash.com/photo-1452195100486-9cc805987862?auto=format&fit=crop&w=800&q=80",
-        altText: "Cheese Selection"
-      }
+        altText: "Cheese Selection",
+      },
     ],
     category: "Dairy",
-    tags: ["premium"]
+    tags: ["premium"],
   },
   {
     id: "3",
@@ -49,11 +48,11 @@ export const products: Product[] = [
     images: [
       {
         url: "https://images.unsplash.com/photo-1615141982883-c7ad0e69fd62?auto=format&fit=crop&w=800&q=80",
-        altText: "Fresh Seafood"
-      }
+        altText: "Fresh Seafood",
+      },
     ],
     category: "Seafood",
-    tags: ["featured"]
+    tags: ["featured"],
   },
   {
     id: "4",
@@ -63,11 +62,11 @@ export const products: Product[] = [
     images: [
       {
         url: "https://images.unsplash.com/photo-1566385101042-1a0aa0c1268c?auto=format&fit=crop&w=800&q=80",
-        altText: "Organic Vegetables"
-      }
+        altText: "Organic Vegetables",
+      },
     ],
     category: "Fresh Produce",
-    tags: ["organic"]
+    tags: ["organic"],
   },
   {
     id: "5",
@@ -77,11 +76,11 @@ export const products: Product[] = [
     images: [
       {
         url: "https://images.unsplash.com/photo-1603048297172-c92544798d1e?auto=format&fit=crop&w=800&q=80",
-        altText: "Premium Meat"
-      }
+        altText: "Premium Meat",
+      },
     ],
     category: "Meat",
-    tags: ["premium", "featured"]
+    tags: ["premium", "featured"],
   },
   {
     id: "6",
@@ -91,11 +90,11 @@ export const products: Product[] = [
     images: [
       {
         url: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80",
-        altText: "Artisanal Breads"
-      }
+        altText: "Artisanal Breads",
+      },
     ],
     category: "Bakery",
-    tags: ["organic"]
+    tags: ["organic"],
   },
   {
     id: "7",
@@ -105,11 +104,11 @@ export const products: Product[] = [
     images: [
       {
         url: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=800&q=80",
-        altText: "Olive Oil Set"
-      }
+        altText: "Olive Oil Set",
+      },
     ],
     category: "Pantry",
-    tags: ["gourmet"]
+    tags: ["gourmet", "featured"],
   },
   {
     id: "8",
@@ -119,11 +118,11 @@ export const products: Product[] = [
     images: [
       {
         url: "https://images.unsplash.com/photo-1466637574441-749b8f19452f?auto=format&fit=crop&w=800&q=80",
-        altText: "Fresh Herbs"
-      }
+        altText: "Fresh Herbs",
+      },
     ],
     category: "Fresh Produce",
-    tags: []
+    tags: [],
   },
   {
     id: "9",
@@ -133,11 +132,11 @@ export const products: Product[] = [
     images: [
       {
         url: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80",
-        altText: "Wine Selection"
-      }
+        altText: "Wine Selection",
+      },
     ],
     category: "Beverages",
-    tags: ["premium", "featured"]
+    tags: ["premium", "featured"],
   },
   {
     id: "10",
@@ -147,10 +146,10 @@ export const products: Product[] = [
     images: [
       {
         url: "https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=800&q=80",
-        altText: "Organic Honey"
-      }
+        altText: "Organic Honey",
+      },
     ],
     category: "Pantry",
-    tags: ["organic"]
-  }
+    tags: ["organic"],
+  },
 ];
