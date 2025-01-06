@@ -4,8 +4,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import type { Product } from "@/data/products";
 
-const HeroSlider = ({ products = [] }) => {
+const HeroSlider = ({ products }: { products: Product[] }) => {
   if (!products || products.length === 0) {
     return null;
   }
@@ -24,7 +25,7 @@ const HeroSlider = ({ products = [] }) => {
           <div className="row items-center px-7 xl:px-16">
             <div className="sm:col-12 lg:col-6 order-2 lg:order-0">
               <div className="text-center py-20 lg:py-32">
-                {item?.description && (
+                {item.description && (
                   <p className="mb-4 lg:mb-6 text-light dark:text-darkmode-light font-medium md:text-2xl">
                     {item.description}
                   </p>
@@ -45,13 +46,13 @@ const HeroSlider = ({ products = [] }) => {
               </div>
             </div>
             <div className="sm:col-12 lg:col-6">
-              {item.images?.nodes[0] && (
+              {item.images[0] && (
                 <img
-                  src={item.images.nodes[0].url}
+                  src={item.images[0].url}
                   className="mx-auto w-[388px] lg:w-full"
                   width="507"
                   height="385"
-                  alt={item.images.nodes[0].altText || "banner image"}
+                  alt={item.images[0].altText}
                 />
               )}
             </div>
