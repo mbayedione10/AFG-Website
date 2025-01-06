@@ -45,13 +45,13 @@ const HeroSlider = ({ products }: { products: Product[] }) => {
               </div>
 
               <div className="sm:col-12 lg:col-6">
-                {item.featuredImage && (
+                {item.images?.nodes[0] && (
                   <img
-                    src={item.featuredImage.url}
+                    src={item.images.nodes[0].url}
                     className="mx-auto w-[388px] lg:w-full"
                     width={"507"}
                     height={"385"}
-                    alt="banner image"
+                    alt={item.images.nodes[0].altText || "banner image"}
                   />
                 )}
               </div>
