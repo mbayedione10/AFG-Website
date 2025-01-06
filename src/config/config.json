@@ -1,12 +1,12 @@
 
 {
   "site": {
-    "title": "Afghan Food Gallery",
+    "title": "African First Group",
     "base_url": "https://astrofront.netlify.app",
     "base_path": "/",
     "favicon": "/images/favicon.png",
-    "logo": "/images/logo.png",
-    "logo_darkmode": "/images/logo-darkmode.png",
+    "logo": "/images/afg-logo.png",
+    "logo_darkmode": "/images/afg-logo.png",
     "description": "Découvrez les saveurs authentiques de l'Afghanistan"
   },
   "settings": {
