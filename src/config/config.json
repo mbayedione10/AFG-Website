@@ -30,5 +30,8 @@
   "amount": {
     "currencySymbol": "XOF",
     "moneyFormat": "XOF{{amount}}"
+  },
+  "params": {
+    "copyright": "© 2024 AFG. All rights reserved."
   }
 }
