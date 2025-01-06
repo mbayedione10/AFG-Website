@@ -1,4 +1,3 @@
-
 {
   "site": {
     "title": "African First Group",
@@ -16,5 +15,10 @@
   "metadata": {
     "meta_author": "AFG",
     "meta_description": "Galerie de cuisine afghane"
+  },
+  "navigation_button": {
+    "enable": false,
+    "label": "Commander",
+    "link": "/products"
   }
 }
