@@ -18,9 +18,17 @@
     "meta_author": "AFG",
     "meta_description": "Galerie de cuisine afghane"
   },
+  "shopify": {
+    "currencySymbol": "€",
+    "moneyFormat": "€{{amount}}"
+  },
   "navigation_button": {
     "enable": false,
     "label": "Commander",
     "link": "/products"
+  },
+  "amount": {
+    "currencySymbol": "XOF",
+    "moneyFormat": "XOF{{amount}}"
   }
 }
