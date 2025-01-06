@@ -24,154 +24,28 @@ const isParentActive = (children: any[]) => {
 };
 ---
 
-<header
-  class:list={[
-    "header z-30",
-    settings.sticky_header && "sticky top-0",
-    "transition-shadow duration-300",
-  ]}
->
-  <nav class="navbar flex-wrap container">
-    <div
-      class="order-1 flex items-center justify-between space-x-7 lg:space-x-14"
-    >
-      <a href="/" class="navbar-brand block">
-        <Logo />
-      </a>
+<header class="header z-30 sticky top-0 bg-white dark:bg-darkmode-body transition-shadow duration-300">
+  <nav class="container flex items-center justify-between py-4">
+    <a href="/" class="navbar-brand">
+      <Logo />
+    </a>
 
-      <div class="relative z-40 hidden md:block">
-        <label
-          for="nav-toggle"
-          class="order-3 cursor-pointer flex items-center text-dark dark:text-white lg:order-1"
-        >
-          <span class="mr-2 font-medium">Pages</span>
-          <button id="nav-toggle" class="focus:outline-none">
-            <svg class="h-3 fill-current block menu-open" viewBox="0 0 20 20">
-              <title>Menu Open</title>
-              <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
-            </svg>
-            <svg class="h-3 fill-current hidden menu-close" viewBox="0 0 20 20">
-              <title>Menu Close</title>
-              <polygon
-                points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
-                transform="rotate(45 10 10)"></polygon>
-            </svg>
-          </button>
-        </label>
+    <div class="flex items-center gap-4 md:gap-8">
+      <button class="text-dark dark:text-white hover:text-primary">Pages</button>
 
-        <div
-          class="fixed top-0 left-0 h-full bg-black opacity-50 w-full hidden overlay"
-        >
-        </div>
-
-        <div
-          class="fixed top-0 left-0 h-full bg-white dark:bg-darkmode-body overflow-y-auto w-full md:w-96 p-9 sidebar transform -translate-x-full transition-transform"
-        >
-          <div class="flex justify-between items-center mb-14">
-            <Logo />
-            <button class="close-sidebar p-2">
-              <svg class="h-5 fill-current block" viewBox="0 0 20 20">
-                <title>Menu Close</title>
-                <polygon
-                  points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
-                  transform="rotate(45 10 10)"></polygon>
-              </svg>
-            </button>
-          </div>
-          <ul class="nav-list">
-            {
-              menu.main.map((menuItem) => (
-                <li
-                  class:list={[
-                    "nav-item",
-                    menuItem.hasChildren && "has-children",
-                  ]}
-                >
-                  {menuItem.hasChildren ? (
-                    <>
-                      <button
-                        class:list={[
-                          "nav-link w-full flex justify-between items-center",
-                          "py-2 px-3",
-                          isParentActive(menuItem.children) &&
-                            "text-primary font-medium",
-                        ]}
-                        data-submenu-toggle
-                      >
-                        {menuItem.name}
-                        <svg
-                          class="h-4 w-4 submenu-arrow transition-transform"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M6 9L12 15L18 9"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-                      </button>
-
-                      <ul class="submenu hidden pl-4 mt-2 space-y-2 bg-white dark:bg-dark rounded-md shadow py-4">
-                        {menuItem.children.map((child) => (
-                          <li>
-                            <a
-                              href={child.url}
-                              class:list={[
-                                "nav-dropdown-link block",
-                                "py-2 px-3",
-                                isMenuItemActive(child.url) &&
-                                  "text-primary font-medium",
-                              ]}
-                            >
-                              {child.name}
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                    </>
-                  ) : (
-                    <a
-                      href={menuItem.url}
-                      class:list={[
-                        "nav-link block",
-                        "py-2 px-3 rounded-lg transition-colors",
-                        isMenuItemActive(menuItem.url) &&
-                          "text-primary font-medium",
-                      ]}
-                    >
-                      {menuItem.name}
-                    </a>
-                  )}
-                </li>
-              ))
-            }
-
-            {
-              navigation_button.enable && (
-                <li class="mt-4 inline-block lg:hidden mr-4 md:mr-6">
-                  <a
-                    class="btn btn-outline-primary btn-sm"
-                    href={navigation_button.link}
-                  >
-                    {navigation_button.label}
-                  </a>
-                </li>
-              )
-            }
-          </ul>
-        </div>
+      <div class="relative flex-1 max-w-lg">
+        <input
+          type="search"
+          placeholder="Search for products"
+          class="w-full px-4 py-2 rounded-full bg-gray-100 dark:bg-darkmode-theme-light"
+        />
+        <button class="absolute right-3 top-1/2 -translate-y-1/2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
       </div>
-    </div>
-
-    <div class="max-lg:mt-4 w-full lg:w-[45%] xl:w-[60%] lg:order-2 order-3">
-      {settings.search && <SearchBar client:load />}
-    </div>
-
-    <div class="order-2 lg:order-3 ml-auto flex items-center lg:ml-0">
       <ThemeSwitcher className="mr-4 md:mr-6" />
       <Cart />
 
@@ -182,8 +56,11 @@ const isParentActive = (children: any[]) => {
           </div>
         )
       }
+    </div>
+  </nav>
+</header>
 
-      <div class="relative z-40 block md:hidden ml-6">
+<div class="relative z-40 block md:hidden ml-6">
         {/* Mobile menu toggle button */}
         <label
           for="nav-toggle-mobile"
@@ -296,9 +173,7 @@ const isParentActive = (children: any[]) => {
           </ul>
         </div>
       </div>
-    </div>
-  </nav>
-</header>
+
 
 <style>
   .nav-list {
@@ -366,10 +241,8 @@ const isParentActive = (children: any[]) => {
 
     // Event Listeners
     window.addEventListener("scroll", updateNavbarShadow);
-    navToggle?.addEventListener("click", toggleSidebar);
     navToggleMobile?.addEventListener("click", toggleSidebar);
     overlay?.addEventListener("click", toggleSidebar);
-    closeButton?.addEventListener("click", toggleSidebar);
     closeButtonMobile?.addEventListener("click", toggleSidebar);
     submenuToggles.forEach((toggle) => {
       toggle.addEventListener("click", toggleSubmenu);
@@ -378,10 +251,9 @@ const isParentActive = (children: any[]) => {
     // Cleanup function
     return () => {
       window.removeEventListener("scroll", updateNavbarShadow);
-      navToggle?.removeEventListener("click", toggleSidebar);
       navToggleMobile?.removeEventListener("click", toggleSidebar);
       overlay?.removeEventListener("click", toggleSidebar);
-      closeButton?.removeEventListener("click", toggleSidebar);
+      closeButtonMobile?.removeEventListener("click", toggleSidebar);
       submenuToggles.forEach((toggle) => {
         toggle.removeEventListener("click", toggleSubmenu);
       });
