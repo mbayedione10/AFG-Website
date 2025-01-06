@@ -10,7 +10,7 @@ const { products } = Astro.props;
         <div class="product-card">
           <a href={`/products/${product.id}`}>
             <img
-              class="mb-3 w-full rounded-lg"
+              class="mb-3 w-full h-[300px] object-cover rounded-lg"
               src={product.images[0].url}
               alt={product.images[0].altText}
               width={540}
