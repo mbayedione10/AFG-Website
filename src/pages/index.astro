@@ -12,7 +12,7 @@ const featuredProducts = products.filter((product) => product.tags.includes("fea
 
 <Base>
   <section class="section pt-0">
-    <HeroSlider client:load />
+    <HeroSlider client:load products={products} />
   </section>
 
   <section class="section pt-0">

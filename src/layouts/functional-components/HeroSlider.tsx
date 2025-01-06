@@ -5,9 +5,12 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import type { Product } from "@/data/products";
+import { products } from "@/data/products";
 
-const HeroSlider = ({ products }: { products: Product[] }) => {
-  if (!products || products.length === 0) {
+const HeroSlider = () => {
+  const featuredProducts = products.filter((product) => product.tags.includes("featured"));
+
+  if (!featuredProducts || featuredProducts.length === 0) {
     return null;
   }
 
@@ -20,7 +23,7 @@ const HeroSlider = ({ products }: { products: Product[] }) => {
       }}
       modules={[Pagination]}
     >
-      {products.map((item) => (
+      {featuredProducts.map((item) => (
         <SwiperSlide key={item.id}>
           <div className="row items-center px-7 xl:px-16">
             <div className="sm:col-12 lg:col-6 order-2 lg:order-0">
