@@ -48,15 +48,13 @@ const HeroSlider = ({ products }: { products: Product[] }) => {
               </div>
             </div>
             <div className="sm:col-12 lg:col-6">
-              {item.images[0] && (
-                <img
-                  src={item.images[0].url}
-                  className="mx-auto w-[388px] lg:w-full"
-                  width="507"
-                  height="385"
-                  alt={item.images[0].altText}
-                />
-              )}
+              <img
+                src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80"
+                className="mx-auto w-[388px] lg:w-full"
+                width="507"
+                height="385"
+                alt="Fresh Food Distribution"
+              />
             </div>
           </div>
         </SwiperSlide>
