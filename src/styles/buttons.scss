@@ -12,7 +12,11 @@
 }
 
 .btn-primary {
-  @apply border-primary bg-primary text-white dark:border-darkmode-primary dark:bg-white dark:text-dark text-center;
+  @apply border-[#E47836] bg-[#E47836] text-white hover:bg-[#d16626] hover:border-[#d16626] transition-colors text-center;
+}
+
+.btn-outline-primary {
+  @apply border-[#89C544] text-[#89C544] hover:bg-[#89C544] hover:text-white transition-colors;
 }
 
 .btn-outline-primary {

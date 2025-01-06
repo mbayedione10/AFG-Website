@@ -22,25 +22,31 @@ const HeroSlider = ({ products }: { products: Product[] }) => {
           <SwiperSlide key={item.id}>
             <div className="row items-center px-7 xl:px-16">
               <div className="sm:col-12 lg:col-6 order-2 lg:order-0">
-                <div className="text-center py-10 lg:py-0">
+                <div className="text-center py-20 lg:py-32">
                   {item?.description && (
-                    <p className="mb-2 lg:mb-3 text-light dark:text-darkmode-light font-medium md:text-xl">
+                    <p className="mb-4 lg:mb-6 text-light dark:text-darkmode-light font-medium md:text-2xl">
                       {item.description}
                     </p>
                   )}
                   <div className="row">
-                    <h1 className="mb-4 lg:mb-10 col-10 sm:col-8 lg:col-12 mx-auto">
+                    <h1 className="mb-8 lg:mb-12 col-10 sm:col-8 lg:col-12 mx-auto">
                       {item.title}
                     </h1>
                   </div>
-                  {item.handle && (
+                  <div className="flex gap-4 justify-center">
                     <a
-                      className="btn btn-sm md:btn-lg btn-primary font-medium"
-                      href={`products/${item.handle}`}
+                      className="btn btn-lg btn-primary font-medium"
+                      href="/contact"
                     >
-                      Shop Now
+                      Obtenir un devis gratuit →
                     </a>
-                  )}
+                    <a
+                      className="btn btn-lg btn-outline-primary font-medium"
+                      href="/products"
+                    >
+                      Découvrir nos produits
+                    </a>
+                  </div>
                 </div>
               </div>
 
