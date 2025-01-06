@@ -13,7 +13,7 @@ export const products: Product[] = [
     id: "1",
     title: "Afghan Kabuli Pulao",
     description: "Traditional Afghan rice dish with carrots and raisins",
-    image: "/images/products/pulao.jpg",
+    image: "https://images.unsplash.com/photo-1590593162201-f67611a18b87?w=800",
     price: 15.99,
     collection: "Main Dishes"
   },
@@ -21,7 +21,7 @@ export const products: Product[] = [
     id: "2", 
     title: "Mantu",
     description: "Steamed dumplings filled with meat and onions",
-    image: "/images/products/mantu.jpg",
+    image: "https://images.unsplash.com/photo-1541518763669-27fef04b14ea?w=800",
     price: 12.99,
     collection: "Appetizers"
   },
@@ -29,7 +29,7 @@ export const products: Product[] = [
     id: "3",
     title: "Afghan Naan",
     description: "Traditional Afghan bread",
-    image: "/images/products/naan.jpg", 
+    image: "https://images.unsplash.com/photo-1584534582042-939e91d1b3f7?w=800",
     price: 3.99,
     collection: "Breads"
   }
@@ -39,17 +39,17 @@ export const collections = [
   {
     title: "Main Dishes",
     handle: "main-dishes",
-    image: "/images/collections/main.jpg"
+    image: "https://images.unsplash.com/photo-1547928576-b822bc410bdf?w=800"
   },
   {
     title: "Appetizers", 
     handle: "appetizers",
-    image: "/images/collections/appetizers.jpg"
+    image: "https://images.unsplash.com/photo-1533622597524-a1215e26c0a2?w=800"
   },
   {
     title: "Breads",
     handle: "breads", 
-    image: "/images/collections/breads.jpg"
+    image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800"
   }
 ];
 
